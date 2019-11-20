@@ -129,6 +129,13 @@
     }
 }
 
+/* Large devices (laptops/desktops, 1366px and up) */
+@media screen and (min-width : 1366px) {
+    .main_image {
+        margin-top: 80px; /* Add a top margin to avoid content overlay */
+    }
+}
+
 /* Extra large devices (large laptops and desktops, 1600px and up) */
 @media screen and (min-width : 1600px) {
     .blocks {

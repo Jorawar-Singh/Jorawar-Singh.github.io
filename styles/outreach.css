@@ -102,3 +102,11 @@ body{
     background-size: contain;
 }
 
+
+/* Large devices (laptops/desktops, 1366px and up) */
+@media only screen and (min-width: 1366px) {
+    .text {
+        font-size: 1em;
+        padding-top: 10px;
+    }
+}

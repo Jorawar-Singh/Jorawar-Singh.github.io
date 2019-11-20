@@ -73,6 +73,16 @@
     }
 }
 
+/* Large devices (laptops/desktops, 1366px and up) */
+@media only screen and (min-width: 1366px) {
+    #footer_left, #footer_right {
+        font-size: 1em;
+    }
+    .main {
+        margin-top: 100px; /* Add a top margin to avoid content overlay */
+    }
+}
+
 /* Extra large devices (large laptops and desktops, 1600px and up) */
 @media screen and (min-width : 1600px) {
 }
