@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>DIRO</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../../styles/reset.css" type="text/css">
+<link rel="stylesheet" href="../../../styles/common.css" type="text/css">
+<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+<style>
+
+.main {
+    margin-top: 75px;
+    display: inline-block;
+    padding: 10vh 0px 10vh 0px;
+    width: 100%;
+    font-size: 2em;
+    color: white;
+    text-align: justify;
+    background-image: url(../../../images/outreach/titles/Tomb_Raider.jpg);
+    background-size: cover;
+    padding-bottom:56.18%;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.55);
+}
+
+</style>
+</head>
+<body>
+
+<!-- THE TOP NAVIGATION BAR -->
+<div class="navbar">
+    <a href="#" style="padding:0 0 0 2%"><img src="../../../images/DIRO.png" width=60px height=70px></a>
+    <a href="../../index_fr.html" style="padding:25px 4% 0 10px">DIRO</a>
+    <a href="../../index_fr.html" id="Home">Accueil</a>
+    <a href="#about" id="About" onClick="changeColor('About')">À propos</a>
+    <a href="../outreach.html" id="Outreach" style="color:#808080;">Activités de sensibilisation</a>
+    <a href="../alumni.html" id="Alumni" onClick="changeColor('Alumni')">Sensibilisation des anciens</a>
+    <a href="../international.html" id="International">Relations internationales</a>
+    <a href="#about" id="Contact" onClick="changeColor('Contact')">Contact</a>
+    <a href="http://www.iisermohali.ac.in/" style="margin-top:0px;padding-top:0px;float:right;"><img src="../../../images/IISERLogo.png" width=70px></a>
+    <a href="../../en/outreach/social.html" style="margin-top:0px;padding-top:30px;float:right;">en</a>
+</div>
+
+
+<div class="main">
+<center><b>Causes sociales</b></center><br>
+<div style="padding-left:10vw;padding-right:10vw;">
+Les étudiants de l’IISER Mohali, avec l’aide des membres du corps professoral, ont mis en place une organisation appelée Jeunesse tentée de nourrir (YATN). Cette organisation se concentre sur les questions liées à l'éducation des enfants défavorisés. Pendant la phase de construction de IISER Mohali, les étudiants et le corps professoral de IISER Mohali ont enseigné aux enfants des travailleurs migrants qui ont participé aux travaux de construction à IISER Mohali. À ce jour, cette organisation finance la scolarisation de bon nombre de ces enfants. Les volontaires de cette organisation sont également impliqués dans l'enseignement à l'école gouvernementale locale du village voisin.
+</div>
+</div>
+
+
+
+
+<!-- FOOTER -->
+<div id="about" class="footer">
+    <div id="footer_left">
+        <b>À PROPOS DE NOUS &nbsp; ></b><br><br>
+Le bureau de Dean Relations internationales and Outreach aide à identifier, faciliter et renforcer les collaborations avec d’autres institutions partenaires du monde entier. Ce bureau est également responsable de la promotion de la cause de la sensibilisation, conformément aux statuts de l'IISER Mohali.
+    </div>
+    <div id="footer_right">
+        <a href="#">FACEBOOK</a><br>
+        <a href="#">TWITTER</a><br>
+        <a href="#">INSTAGRAM</a><br><br>
+        CONTACT &nbsp; ><br>
+        T: 123-456-7890<br>
+        F: 123-456-7890<br>
+        E: info@mysite.com<br><br>
+        &copy; 2019 by Jorawar<br>
+    </div>
+</div>
+<div id="spacing"></div>
+
+</body>
+<script>
+function changeColor(item) {
+  var i;
+  var x = ["Home","About","Outreach","Alumni","International","Contact"];
+  for (i = 0; i < x.length; i++) {
+    document.getElementById(x[i]).style.color = "#000080";
+  }
+  document.getElementById(item).style.color = "#808080";
+}
+</script>
+</html>

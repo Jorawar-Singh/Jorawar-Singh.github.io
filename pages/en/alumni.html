@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>DIRO</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles/reset.css" type="text/css">
+<link rel="stylesheet" href="../../styles/common.css" type="text/css">
+<link rel="stylesheet" href="../../styles/alumni.css" type="text/css">
+<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+
+<!-- THE TOP NAVIGATION BAR -->
+<div class="navbar">
+    <a href="#" style="padding:0 0 0 2%"><img src="../../images/DIRO.png" width=60px height=70px></a>
+    <a href="#" style="padding:25px 4% 0 10px">DIRO</a>
+    <a href="../../index.html" id="Home">Home</a>
+    <a href="#about" id="About" onClick="changeColor('About')">About</a>
+    <a href="outreach.html" id="Outreach">Outreach Activities</a>
+    <a href="#" id="Alumni" style="color:#808080;" onClick="changeColor('Alumni')">Alumni Outreach</a>
+    <a href="international.html" id="International">International Relations</a>
+    <a href="#about" id="Contact" onClick="changeColor('Contact')">Contact</a>
+    <a href="http://www.iisermohali.ac.in/" style="margin-top:0px;padding-top:0px;float:right;"><img src="../../images/IISERLogo.png" width=70px></a>
+    <a href="../fr/alumni.html" style="margin-top:0px;padding-top:30px;float:right;">fr</a>
+</div>
+
+<div class="alumni">
+    Alumni are an essential resource in terms of mentoring the current students, facilitating opportunities and in establishing programs at IISER Mohali. Towards this end, IISER Mohali Alumni Association has already been established, and the first Alumni meet was held on December 2017. The second Alumni meet has been planned for December 2019 at IISER Mohali.<br><br>
+
+    <div id="row1_col1">
+        <img src="../../images/alumni/geralt.png" width=100%>
+        <div id="replaceText">Replace with events<br> or other cards</div>
+    </div>
+    <div id="row1_col2">
+        <img src="../../images/alumni/ciri.png" width=100%>
+        <div id="replaceText2">Replace with events<br> or other cards</div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div id="about" class="footer">
+    <div id="footer_left">
+        <b>ABOUT US &nbsp; ></b><br><br>
+        The office of Dean International Relations and outreach helps to identify, facilitate and strengthen collaborations with other partner institutions from around the world. This office is also responsible for furthering the cause of outreach as mandated by the statues of IISER Mohali.
+    </div>
+    <div id="footer_right">
+        <a href="#">FACEBOOK</a><br>
+        <a href="#">TWITTER</a><br>
+        <a href="#">INSTAGRAM</a><br><br>
+        CONTACT &nbsp; ><br>
+        T: 123-456-7890<br>
+        F: 123-456-7890<br>
+        E: info@mysite.com<br><br>
+        &copy; 2019 by Jorawar<br>
+    </div>
+</div>
+<div id="spacing"></div>
+
+</body>
+<script>
+function changeColor(item) {
+  var i;
+  var x = ["Home","About","Outreach","Alumni","International","Contact"];
+  for (i = 0; i < x.length; i++) {
+    document.getElementById(x[i]).style.color = "#000080";
+  }
+  document.getElementById(item).style.color = "#808080";
+}
+</script>
+</html>

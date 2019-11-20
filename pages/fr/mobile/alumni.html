@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>DIRO</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../../styles/reset.css" type="text/css">
+<link rel="stylesheet" href="../../../styles/common.css" type="text/css">
+<link rel="stylesheet" href="../../../styles/alumni.css" type="text/css">
+<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+
+<div id="mobile" style="background:rgb(75,0,130);font-size:2em;width:100%">
+
+<div id="mobile_nav">
+    <a style="font-size:1.5em;cursor: pointer;position:fixed;top:0px;right:30px;" onclick="closeNav()">&times;</a>
+    <a href="#" style="color:rgba(255,255,0,0.8)">Accueil</a><br>
+    <a href="#about2" onclick="closeNav()">À propos</a><br>
+    <a href="outreach.html">Activités de sensibilisation</a><br>
+    <a href="#" style="color:rgba(255,255,0,0.8)">Sensibilisation des anciens</a><br>
+    <a href="international.html" >Relations internationales</a><br>
+    <a href="#about2" onclick="closeNav()">Contact</a><br>
+    <a href="visit.html">Visite</a><br>
+</div>
+
+<div class="top">
+    <a href="#" style="padding:0 0 0 2%"><img src="../../../images/DIRO.png" height=90px></a>
+    <a href="#" style="padding:25px 4% 0 10px">DIRO</a>
+    <a style="padding:25px 4% 0 10px;font-size:1.6em;cursor: pointer;float:right;" onclick="openNav()">&#9776;</a>
+    <a href="../../en/mobile/alumni.html" style="margin-top:0px;padding-top:23px;float:right;">en</a>
+</div>
+
+<div class="mobile_alumni">
+Les anciens sont une ressource essentielle en termes de mentorat des étudiants actuels, de facilitation des opportunités et d’établissement de programmes à IISER Mohali. À cette fin, l'Association des anciens de l'IISER Mohali a déjà été créée et la première réunion des anciens s'est tenue en décembre 2017. La deuxième réunion des anciens est prévue pour décembre 2019 à l'IISER Mohali.<br><br>
+
+    <div id="mobile_row1_col1">
+        <img src="../../../images/alumni/geralt.png" width=100%>
+    </div>
+    <div id="mobile_row1_col2">
+        <img src="../../../images/alumni/ciri.png" width=100%>
+    </div>
+</div>
+
+
+<!-- FOOTER -->
+<div id="about2" class="mobile_footer">
+    <b>À PROPOS DE NOUS &nbsp; ></b><br><br>
+    <p>Le bureau de Dean Relations internationales and Outreach aide à identifier, faciliter et renforcer les collaborations avec d’autres institutions partenaires du monde entier. Ce bureau est également responsable de la promotion de la cause de la sensibilisation, conformément aux statuts de l'IISER Mohali.<p><br><br><br>
+
+    <div id="mobile_footer_below">
+        <a href="#">FACEBOOK</a><br>
+        <a href="#">TWITTER</a><br>
+        <a href="#">INSTAGRAM</a><br><br>
+        CONTACT &nbsp; ><br>
+        T: 123-456-7890<br>
+        F: 123-456-7890<br>
+        E: info@mysite.com<br><br>
+        &copy; 2019 by Jorawar<br>
+    </div>
+</div>
+
+</div>
+</body>
+<script>
+function closeNav(){
+    document.getElementById("mobile_nav").style.visibility = "hidden";
+    document.getElementById("mobile_nav").style.opacity = "0";
+}
+function openNav(){
+    document.getElementById("mobile_nav").style.visibility = "visible";
+    document.getElementById("mobile_nav").style.opacity = "1";
+}
+
+</script>
+</html>

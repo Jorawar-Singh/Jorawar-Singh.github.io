@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>DIRO</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles/reset.css" type="text/css">
+<link rel="stylesheet" href="../../styles/common.css" type="text/css">
+<link rel="stylesheet" href="../../styles/outreach.css" type="text/css">
+<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+</body>
+<script type="text/javascript" src="../../scripts/justified-layout.js"></script>
+<script>
+function changeColor(item) {
+  var i;
+  var x = ["Home","About","Outreach","Alumni","International","Contact"];
+  for (i = 0; i < x.length; i++) {
+    document.getElementById(x[i]).style.color = "#000080";
+  }
+  document.getElementById(item).style.color = "#808080";
+}
+</script>
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded',meFunc);
+    window.addEventListener('resize', meFunc);
+    var photoArray = {'0': 'Uncharted.jpg', '1': 'Horizons.jpg', '2': 'Assassins_Creed.jpg', '3': 'Final_Fantasy.jpg', '4': 'Far_Cry.jpg', '5': 'Halo.jpg', '6': 'Watch_Dogs.jpg', '7': 'Tomb_Raider.jpg'};
+    var names = {'0': "Programme de recherche d'été IISERM", '1': "Programme IISERM Nurture", '2': "Programmes à court terme", '3': "Journée de la fondation", '4': "Pour les enseignants", '5': "Génération de matériel pédagogique", '6': "Traduction de manuels scolaires", '7': "Causes sociales"};
+    var links = {'0': 'summer', '1': 'nurture', '2': 'short_term', '3': 'foundation', '4': 'teachers', '5': 'material', '6': 'translation', '7': 'social'};
+    var size = [1.78, 1.78, 1.78, 1.78, 1.78, 1.78, 1.78, 1.78];
+    function removeDotJPG(str){
+        return str.substring(0,str.length-4);
+    }
+    function dimAll(selected) {
+        for (const name of Object.values(photoArray)){
+            document.getElementById(name).style.opacity = 0.3;
+        }
+        document.getElementById(photoArray[selected]).style.opacity = 1;
+        document.getElementById(`image${photoArray[selected]}`).src = `../../images/outreach/titles/${photoArray[selected]}`;
+    }
+    function reset() {
+        for (const name of Object.values(photoArray)) {
+            document.getElementById(name).style.opacity = 1;
+        }
+    }
+
+    function meFunc() {
+        document.body.innerHTML = '';
+        var picNum = 0;
+        var viewWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	    var justifiedLayout = require('justified-layout');
+        var geometry = justifiedLayout(size,{"containerWidth":viewWidth-30,"targetRowHeight": 200,"boxSpacing": 15  });
+
+        var section = document.createElement("section");
+        section.innerHTML = `
+
+<!-- THE TOP NAVIGATION BAR -->
+<div class="navbar">
+    <a href="#" style="padding:0 0 0 2%"><img src="../../images/DIRO.png" width=60px height=70px></a>
+    <a href="../../index_fr.html" style="padding:25px 4% 0 10px">DIRO</a>
+    <a href="../../index_fr.html" id="Home">Accueil</a>
+    <a href="#about" id="About" onClick="changeColor('About')">À propos</a>
+    <a href="#" id="Outreach" style="color:#808080;">Activités de sensibilisation</a>
+    <a href="alumni.html" id="Alumni" onClick="changeColor('Alumni')">Sensibilisation des anciens</a>
+    <a href="international.html" id="International">Relations internationales</a>
+    <a href="#about" id="Contact" onClick="changeColor('Contact')">Contact</a>
+    <a href="http://www.iisermohali.ac.in/" style="margin-top:0px;padding-top:0px;float:right;"><img src="../../images/IISERLogo.png" width=70px></a>
+    <a href="../en/outreach.html" style="margin-top:0px;padding-top:30px;float:right;">en</a>
+</div>
+
+<div class="outreach">
+    Un paragraphe présentant toutes les activités de IISER Mohali sous DIRO. <br>
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+</div>
+
+<div class="justified"></div>
+
+<!-- FOOTER -->
+<div id="about" class="footer">
+    <div id="footer_left">
+        <b>À PROPOS DE NOUS &nbsp; ></b><br><br>
+Le bureau de Dean Relations internationales and Outreach aide à identifier, faciliter et renforcer les collaborations avec d’autres institutions partenaires du monde entier. Ce bureau est également responsable de la promotion de la cause de la sensibilisation, conformément aux statuts de l'IISER Mohali.
+    </div>
+    <div id="footer_right">
+        <a href="#">FACEBOOK</a><br>
+        <a href="#">TWITTER</a><br>
+        <a href="#">INSTAGRAM</a><br><br>
+        CONTACT &nbsp; ><br>
+        T: 123-456-7890<br>
+        F: 123-456-7890<br>
+        E: info@mysite.com<br><br>
+        &copy; 2019 by Jorawar<br>
+    </div>
+</div>
+<div id="spacing"></div>
+
+`;
+
+        document.body.appendChild(section);
+
+        var boxes = ``;
+        var box = geometry.boxes;
+        for (picNum = 0; picNum < Object.keys(photoArray).length; picNum++) { 
+            boxes += `
+<div class="container" onclick="window.open('outreach/${links[picNum]}.html','_self');" id="${photoArray[picNum]}" style="cursor:pointer; width: ${box[picNum].width}px; height: ${box[picNum].height}px; top: ${box[picNum].top}px; left: ${box[picNum].left}px">
+<img onmouseover="dimAll(${picNum})" onmouseout="reset()" class="image" id="image${photoArray[picNum]}" src="../../images/outreach/thumbnails/${photoArray[picNum]}" style="width: 100% height: 100%"s>
+<div class="middle" onmouseover="dimAll(${picNum})" onmouseout="reset()">
+    <div class="text" onmouseover="dimAll(${picNum})" onmouseout="reset()">
+        <!--b>${removeDotJPG(photoArray[picNum])}</b-->
+        <b>${names[picNum]}</b>
+    </div>
+</div>
+</div>\n
+        `;}
+	    section.querySelector('.justified').innerHTML = boxes;
+	    section.querySelector('.justified').style.height = geometry.containerHeight + "px";
+}
+</script>
+<script>
+var photoArray = {'0': 'Uncharted.jpg', '1': 'Horizons.jpg', '2': 'Assassins_Creed.jpg', '3': 'Final_Fantasy.jpg', '4': 'Far_Cry.jpg', '5': 'Halo.jpg', '6': 'Watch_Dogs.jpg', '7': 'Tomb_Raider.jpg'};
+
+window.onload = function (){
+    for (const name of Object.values(photoArray)){
+        document.getElementById(`image${name}`).src = `../../images/outreach/titles/${name}`;
+    }
+}
+</script>
+</html>

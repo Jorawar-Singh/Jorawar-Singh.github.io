@@ -1,0 +1,133 @@
+body{
+    background: rgb(75,0,130);
+}
+
+.alumni {
+    margin-top: 75px;
+    display: inline-block;
+    padding: 10vh 0px 10vh 0px;
+    margin-left: 25vw;
+    margin-right: auto;
+    width: 50%;
+    font-size: 2em;
+    color: white;
+    text-align: justify;
+    background: rgb(75,0,130);
+}
+
+#row1_col1 {
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+    display: inline-block;
+    float: left;
+    width: 23vw;
+    padding: 0.5vw 1vw 0.5vw 0.5vw;
+    transition: 0.25s;
+}
+#row1_col1:hover img {
+    opacity: 0;
+    transition: 0.25s;
+}
+
+#replaceText {
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    transform: translate(0%, -50%);
+    font-weight: bold;
+}
+
+#row1_col2 {
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+    float: right;
+    display: inline-block;
+    width: 23vw;
+    padding: 0.5vw 1vw 0.5vw 0.5vw;
+}
+#row1_col2:hover img {
+    opacity: 0;
+    transition: 0.25s;
+}
+#replaceText2 {
+    position: absolute;
+    top: 80%;
+    left: 58%;
+    transform: translate(0%, -50%);
+    font-weight: bold;
+}
+
+
+/* MEDIA QUERRIES */
+/* Medium devices (landscape tablets, 1024px and up) */
+@media only screen and (min-width: 1024px) {
+    #replaceText, #replaceText2 {
+        font-size: 0.75em;
+    }
+    #replaceText2 {
+        position: absolute;
+        top: 80%;
+        left: 55%;
+    }
+    #row1_col1 {
+        width:22vw
+    }
+    #row1_col2 {
+        width:22vw
+    }
+}
+
+/* Large devices (laptops/desktops, 1280px and up) */
+@media only screen and (min-width: 1280px) {
+    #row1_col1 {
+        width:23vw
+    }
+    #row1_col2 {
+        width:23vw
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1600px and up) */
+@media screen and (min-width : 1600px) {
+    #replaceText, #replaceText2 {
+        font-size: 1em;
+    }
+}
+
+/* MOBILE STYLING */
+.mobile_alumni {
+    margin-top: 75px;
+    display: inline-block;
+    padding: 10vh 10px 10vh 10px;
+    margin-left: 10vw;
+    margin-right: auto;
+    width: 80%;
+    font-size: 2em;
+    color: white;
+    text-align: justify;
+    background: rgb(75,0,130);
+}
+
+#mobile_row1_col1 {
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+    display: inline-block;
+    float: left;
+    width: 35vw;
+    padding: 0.5vw 1vw 0.5vw 0.5vw;
+    transition: 0.25s;
+}
+
+#mobile_row1_col2 {
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+    float: right;
+    display: inline-block;
+    width: 35vw;
+    padding: 0.5vw 1vw 0.5vw 0.5vw;
+}
+
